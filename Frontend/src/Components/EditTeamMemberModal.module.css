@@ -20,7 +20,7 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-h3 {
+.h3 {
     margin-top: 0;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
@@ -34,7 +34,7 @@ h3 {
     gap: 1rem;
 }
 
-label {
+.label {
     display: flex;
     flex-direction: column;
     font-weight: 500;
@@ -42,8 +42,8 @@ label {
     font-size: 0.95rem;
 }
 
-input,
-select {
+.widthInput,
+.select {
     margin-top: 0.3rem;
     padding: 0.6rem 0.8rem;
     border-radius: 8px;
@@ -51,8 +51,8 @@ select {
     font-size: 1rem;
 }
 
-input:focus,
-select:focus {
+.widthInput:focus,
+.select:focus {
     outline: none;
     border-color: #184E7F;
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);

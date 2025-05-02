@@ -56,12 +56,18 @@
     display: flex;
 }
 
+.checkbox>input {
+    height: 15px;
+    width: 15px
+}
+
+
 .nameInput,
 .phoneInput,
 .emailInput,
 .passwordInput,
 .confirmPasswordInput {
-    height: 5vh;
+    height: 2.5vh;
     width: 35vw;
     border: 1px solid rgba(102, 102, 102, 0.35);
     border-radius: 0.6vw;
@@ -88,60 +94,3 @@
 .terms {
     font-size: 0.8vw;
 }
-
-
-/*.password {
-    font-family: "Poppins", sans-serif;
-    color: #666666;
-    margin-top: 3vh;
-}
-
-.emailInput {
-    height: 5vh;
-    width: 35vw;
-    border: 1px solid rgba(102, 102, 102, 0.35);
-    border-radius: 0.6vw;
-}
-
-.passwordInput {
-    height: 5vh;
-    width: 35vw;
-    border: 1px solid rgba(102, 102, 102, 0.35);
-    border-radius: 0.6vw;
-}
-
-.submitBtn {
-    margin-top: 6vh;
-    background-color: #c3c3c3;
-    width: 35vw;
-    border-radius: 5vw;
-    color: white;
-    font-family: "Inter", sans-serif;
-}
-
-.forgot {
-    display: flex;
-    justify-content: center;
-    margin-top: 4vh;
-    font-family: "Inter", sans-serif;
-    color: #244779
-}
-
-.signup {
-    display: flex;
-    justify-content: center;
-    font-family: "Inter", sans-serif;
-}
-
-.signup>u {
-    color: #244779;
-}
-
-.footer {
-    display: flex;
-    justify-content: center;
-    font-family: "Inter", sans-serif;
-    color: #676B5F;
-    font-size: 0.8vw;
-    margin-top: 18vh;
-} */

@@ -143,25 +143,27 @@ const EditProfile = () => {
                 <h3>Edit Profile</h3>
                 <hr style={{ width: "90%", color: "gray", height: "1px", backgroundColor: "gray", marginTop: "-3vh" }} />
                 <form className={styles.form} onSubmit={handleProfileUpdate}>
-                    <label>Name</label>
+                    <label className={styles.label}>Name</label>
                     <input
                         type="text"
                         name="name"
                         value={userData.name}
                         onChange={handleChange}
+                        className={styles.Input}
                         required
                     />
 
-                    <label>Phone</label>
+                    <label className={styles.label}>Phone</label>
                     <input
                         type="tel"
                         name="phone"
                         value={userData.phone}
                         onChange={handleChange}
+                        className={styles.Input}
                         required
                     />
 
-                    <label>
+                    <label className={styles.label}>
                         Email
                         <span data-tooltip-id="emailTip"> ⓘ </span>
                         <Tooltip id="emailTip" place="right" content="Used for login & communication" />
@@ -171,10 +173,11 @@ const EditProfile = () => {
                         name="email"
                         value={userData.email}
                         onChange={handleChange}
+                        className={styles.Input}
                         required
                     />
 
-                    <label>
+                    <label className={styles.label}>
                         Password
                         <span data-tooltip-id="passTip"> ⓘ </span>
                         <Tooltip id="passTip" place="right" content="User will be logged out immediately" />
@@ -183,10 +186,11 @@ const EditProfile = () => {
                         type="password"
                         name="password"
                         value={password}
+                        className={styles.Input}
                         onChange={(e) => setPassword(e.target.value)}
                     />
 
-                    <label>
+                    <label className={styles.label}>
                         Confirm Password
                         <span data-tooltip-id="confirmPassTip"> ⓘ </span>
                         <Tooltip id="confirmPassTip" place="right" content="User will be logged out immediately" />
@@ -195,6 +199,7 @@ const EditProfile = () => {
                         type="password"
                         name="confirmPassword"
                         value={confirmPassword}
+                        className={styles.Input}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
 

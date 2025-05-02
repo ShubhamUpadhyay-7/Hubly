@@ -51,23 +51,23 @@ const EditTeamMemberModal = ({ user, onClose, onUserUpdated }) => {
     return (
         <div className={styles.modalOverlay}>
             <div className={styles.modal}>
-                <h3>Edit Team Member</h3>
+                <h3 className={styles.h3}>Edit Team Member</h3>
                 <form onSubmit={handleSubmit} className={styles.form}>
-                    <label>
+                    <label className={styles.label}>
                         Name:
                         <input name="name" value={formData.name} onChange={handleChange} placeholder="Name" className={styles.widthInput} required />
                     </label>
-                    <label>
+                    <label className={styles.label}>
                         Phone:
                         <input name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone" className={styles.widthInput} />
                     </label>
-                    <label>
+                    <label className={styles.label}>
                         Email:
                         <input name="email" value={formData.email} onChange={handleChange} placeholder="Email" className={styles.widthInput} required />
                     </label>
-                    <label>
+                    <label className={styles.label}>
                         Role:
-                        <select name="role" value={formData.role} onChange={handleChange}>
+                        <select name="role" value={formData.role} className={styles.select} onChange={handleChange}>
                             <option value="Member">Member</option>
                             <option value="Admin">Admin</option>
                         </select>

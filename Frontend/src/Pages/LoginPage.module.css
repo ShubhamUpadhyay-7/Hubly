@@ -42,14 +42,14 @@
 }
 
 .emailInput {
-    height: 5vh;
+    height: 2.5vh;
     width: 35vw;
     border: 1px solid rgba(102, 102, 102, 0.35);
     border-radius: 0.6vw;
 }
 
 .passwordInput {
-    height: 5vh;
+    height: 2.5vh;
     width: 35vw;
     border: 1px solid rgba(102, 102, 102, 0.35);
     border-radius: 0.6vw;
