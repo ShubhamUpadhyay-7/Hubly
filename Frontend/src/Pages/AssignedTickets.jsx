@@ -23,7 +23,7 @@ const AssignedTickets = () => {
                     return;
                 }
 
-                const response = await axios.get(`http://localhost:5000/api/assigned/${adminEmail}`, {
+                const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/assigned/${adminEmail}`, {
                     headers: {
                         "Authorization": `Bearer ${token}`, // Add token for authorization
                     },
