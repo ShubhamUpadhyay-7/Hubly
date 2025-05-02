@@ -3,7 +3,7 @@ const User = require('../models/User');
 const express = require("express");
 const router = express.Router();
 const CommonPassword = require('../models/CommonPassword');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 
