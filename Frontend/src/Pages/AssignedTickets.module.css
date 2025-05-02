@@ -9,6 +9,11 @@
     flex-direction: row;
 }
 
+.sidebar {
+    position: fixed;
+}
+
+
 .header {
     margin-left: 2vw;
 }
@@ -34,6 +39,7 @@
 .ticketspanel {
     display: flex;
     flex-direction: column;
+    margin-left: 9vw;
 }
 
 .buttons {

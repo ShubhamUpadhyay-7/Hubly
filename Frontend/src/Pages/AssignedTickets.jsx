@@ -62,7 +62,7 @@ const AssignedTickets = () => {
 
     return (
         <div className={styles.AssignedTicketsWrapper}>
-            <Sidebar />
+            <div className={styles.sidebar}><Sidebar /></div>
             <div className={styles.ticketspanel}>
                 <div className={styles.header}>
                     <h3>Dashboard</h3>

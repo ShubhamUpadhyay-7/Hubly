@@ -5,6 +5,11 @@
     flex-direction: row;
 }
 
+.sidebar {
+    position: fixed;
+}
+
+
 .chats {
     padding: 10px;
     width: 24vw;

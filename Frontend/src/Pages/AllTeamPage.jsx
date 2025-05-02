@@ -61,7 +61,7 @@ const AllTeamPage = () => {
 
     return (
         <div className={styles.wrapper}>
-            <Sidebar />
+            <div className={styles.sidebar}><Sidebar /></div>
             <div className={styles.container}>
                 <h2 className={styles.heading}>Team</h2>
 
