@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.wrapper {
+    display: flex;
+    gap: 10vw;
+}
+
+.chatPreview {
+    margin-left: 15vw;
+}
+
+.heading {
+    margin-left: -4vw;
+    font-family: "Inter", sans-serif;
+    color: #6A6B70;
+    font-size: 18px;
+}

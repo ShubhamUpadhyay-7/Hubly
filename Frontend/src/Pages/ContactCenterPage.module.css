@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.chats {
+    padding: 10px;
+    width: 24vw;
+    border: 1px solid black;
+}
+
+.name {
+    padding-top: 10px;
+    padding-right: 10px;
+    font-family: "Inter", sans-serif;
+    color: #6A6B70;
+    border: 1px solid black;
+}

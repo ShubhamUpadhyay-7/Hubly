@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 2vw;
+    width: 35vw;
+    border-radius: 1vw;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+    margin-bottom: 0.6vh;
+    font-size: 1.5vw;
+    font-weight: 600;
+    margin-top: 0.2vh;
+    font-family: "Inter", sans-serif;
+}
+
+.subtext {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+    font-family: "Inter", sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 30vw
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5vw;
+    margin-top: 1.2vh;
+}
+
+.form>select {
+    width: 31.5vw;
+}
+
+.cancelButton {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.saveButton {
+    background-color: #003366;
+    color: white;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}

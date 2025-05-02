@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.container {
+    display: flex;
+    font-family: "Inter", sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+}
+
+.sectionTitle {
+    color: limegreen;
+    font-size: x-large;
+}
+
+.subTitle {
+    color: limegreen;
+    font-size: x-large;
+}
+
+.flexRow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.circularContainer {
+    margin-right: 25vw;
+}
+
+.bottomSection {
+    margin-top: 1vh;
+    display: flex;
+}
+
+.totalChatsCount {
+    display: flex;
+    align-items: center;
+    margin-left: 10vw;
+}
+
+.averageReplyTimeDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-right: 26vw;
+}
+
+.averageReplyTimeDiv>p {
+    width: 95%
+}

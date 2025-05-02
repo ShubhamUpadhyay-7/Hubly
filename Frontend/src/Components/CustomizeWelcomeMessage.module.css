@@ -1,0 +1,59 @@
+.card {
+    margin-left: 12vw;
+    width: 18vw;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    padding: 1vh 1vw;
+    margin-top: 3vh;
+    font-family: "Poppins", sans-serif;
+    border-radius: 1vw;
+    height: 25vh;
+    margin-bottom: 2vh;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.box {
+    background-color: #f5f7f8;
+    border-radius: 12px;
+    padding: 12px;
+    position: relative;
+}
+
+.preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: #33475b;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 8px;
+    font-family: inherit;
+    resize: none;
+    outline: none;
+    background-color: #f5f7f8;
+    color: #33475b;
+    height: 10vh
+}
+
+.counter {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 12px;
+    color: #999;
+}
+
+.icon {
+    cursor: pointer;
+    color: #999;
+}

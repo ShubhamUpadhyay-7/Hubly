@@ -1,0 +1,47 @@
+.container {
+    margin-left: 12vw;
+    width: 18vw;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    padding: 1vh 1vw;
+    margin-top: 3vh;
+    font-family: "Poppins", sans-serif;
+    border-radius: 1vw;
+}
+
+.title {
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.label {
+    display: block;
+    margin: 10px 0 6px;
+    color: #555;
+    font-size: 14px
+}
+
+.input {
+    width: 90%;
+    padding: 10px 12px;
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+/* .input:focus {
+    outline: none;
+    border-color: #33475b;
+} */
+
+.button {
+    display: flex;
+    background-color: #1e4d7d;
+    width: 80%;
+    height: 6vh;
+    color: white;
+    justify-content: center;
+    margin-top: 1vh;
+    margin-left: 10%;
+}

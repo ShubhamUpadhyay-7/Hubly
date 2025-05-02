@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.AssignedTicketsWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    margin-left: 2vw;
+}
+
+.header>h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #6A6B70;
+    margin-left: -77vw;
+    font-size: 1.5vw;
+    margin-top: 2vh;
+}
+
+.searchBox>input {
+    height: 5vh;
+    width: 14vw;
+    padding-left: 1vw;
+    background-color: #fbfbfb;
+    border: 1px solid #E7E7E7;
+    font-family: "Montserrat", sans-serif;
+}
+
+.ticketspanel {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    margin-left: 1vw;
+    margin-top: 7vh;
+}
+
+.buttons button {
+    background-color: white;
+    font-family: "Inter", sans-serif;
+    color: #888888;
+    font-size: medium;
+}
+
+.ticketCard {
+    height: 25vh;
+    width: 85vw;
+    background-color: #FEFEFE;
+    border: 1px solid #E7E7E7;
+    margin-left: 2vw;
+    margin-top: 3vh;
+    border-radius: 6px;
+}
+
+.ticketHeader {
+    padding-left: 2vw;
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ticketId {
+    font-family: "Montserrat", sans-serif;
+    color: #2E2C34;
+    font-weight: 600
+}
+
+.ticketTime {
+    margin-right: 2vw;
+    font-size: smaller;
+}
+
+.ticketBody {
+    font-family: "Poppins", sans-serif;
+    color: black;
+    padding-left: 2vw;
+}
+
+.ticketFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 3vw;
+}
+
+.customerInfo {
+    display: flex;
+    flex-direction: row;
+}
+
+.customerInfo>img {
+    width: 4vw;
+    height: 8vh;
+    padding-left: 2vw;
+}
+
+.customerName {
+    font-family: "Montserrat", sans-serif;
+    color: #84818A;
+    font-size: medium;
+}
+
+.customerPhone {
+    font-family: "Montserrat", sans-serif;
+    color: #84818A;
+    font-size: smaller;
+}
+
+.customerEmail {
+    font-family: "Montserrat", sans-serif;
+    color: #84818A;
+    font-size: smaller;
+}

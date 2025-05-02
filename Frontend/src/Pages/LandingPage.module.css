@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FAFCFE;
+    z-index: 1000;
+    padding-left: 8vw;
+    padding-right: 6vw;
+    padding-top: 1vh;
+    /* border-bottom: solid 1px black; */
+}
+
+.logo {
+    width: 9vw;
+}
+
+.navlinks {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.signup {
+    background-color: #244779;
+    color: white;
+    font-family: "Barlow", sans-serif;
+}
+
+.login {
+    background-color: white;
+    font-family: "Barlow", sans-serif;
+    color: #36364A;
+    background-color: #FAFCFE;
+}
+
+.heroSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FAFCFE;
+    padding-bottom: 10vh;
+}
+
+.heroImage {
+    padding-right: 8vw;
+    padding-left: 15vw;
+    padding-top: 12vh;
+}
+
+.heroContent {
+    padding-left: 7vw;
+}
+
+.heroButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+.watchVideo {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2vw;
+}
+
+.watchVideoText {
+    padding-left: 0.6vw;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+}
+
+.playIcon {
+    height: 6vh;
+    padding-top: 1vh;
+}
+
+.getStartedBtn {
+    background-color: #244779;
+    color: white;
+    font-family: "Barlow", sans-serif;
+}
+
+.heroTitle {
+    color: #30404D;
+    font-family: "Barlow", sans-serif;
+}
+
+.heroSubtitle {
+    color: #30404D;
+    font-family: "Barlow", sans-serif;
+}
+
+.logos {
+    height: 17vh;
+    background-color: #EBF1F9;
+    width: 83vw;
+    display: flex;
+    flex-direction: row;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logos>img {
+    height: 7vh;
+    width: 11vw;
+}
+
+.heading2 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: -0vh;
+    font-family: "Barlow", sans-serif;
+    color: #30404D;
+    padding-top: 10vh;
+}
+
+.para2 {
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    color: #30404D;
+}
+
+.box {
+    border: 1px solid grey;
+    border-radius: 1vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    display: flex;
+    height: 68vh;
+    background-color: white;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+}
+
+.image1 {
+    margin-left: 15vw;
+    height: 20vh;
+    width: 20vw;
+}
+
+.image2 {
+    margin-left: 5vw;
+    margin-top: -17vh;
+}
+
+.points {
+    padding-left: 2vw;
+}
+
+.points>h3 {
+    font-family: "Barlow", sans-serif;
+}
+
+.heading3 {
+    text-align: center;
+    margin-top: -0vh;
+    padding-top: 8vh;
+    font-size: 36px;
+    font-family: "Barlow", sans-serif;
+    color: #30404D;
+}
+
+.para3 {
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    color: #30404D;
+}
+
+.boxes {
+    width: 82vw;
+    height: 88vh;
+    padding-left: 8vw;
+    padding-right: 9vw;
+    margin-top: -3vh;
+    padding-top: 12vh;
+    display: flex;
+    padding-bottom: 10vh;
+}
+
+.box1 {
+    width: 35vw;
+    height: 88vh;
+    border: 1px solid #98A8B3;
+    border-radius: 1.5vw;
+}
+
+.box2 {
+    margin-left: 12vw;
+    width: 35vw;
+    height: 88vh;
+    border: 1px solid #98A8B3;
+    border-radius: 1.5vw;
+}
+
+.box1heading {
+    padding-left: 2vw;
+    font-family: "Barlow", sans-serif;
+    color: #30404D;
+}
+
+.box1para1 {
+    padding-left: 2vw;
+    font-family: "Barlow", sans-serif;
+    color: #30404D;
+}
+
+.cost1 {
+    font-size: 36px;
+    padding-left: 2vw;
+    font-weight: 700;
+    font-family: "Barlow", sans-serif;
+    color: #3A7ABD
+}
+
+.box1para2 {
+    padding-left: 2vw;
+    font-family: "Barlow", sans-serif;
+    color: #30404D;
+    font-weight: 700;
+}
+
+.ticklist {
+    list-style: none;
+}
+
+.ticklist>li {
+    background: url("/images/Check icon.png") no-repeat left center;
+    background-size: 16px 16px;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    font-family: "Barlow", sans-serif;
+    color: #30404D;
+}
+
+.btn1 {
+    margin-top: 10vh;
+    width: 30vw;
+    margin-left: 2.5vw;
+    color: #244779;
+    font-family: "Barlow", sans-serif;
+    height: 7.5vh;
+    border: 1px solid #244779;
+    border-radius: 2vw;
+    font-weight: 500;
+}
+
+.btn2 {
+    margin-top: 5.5vh;
+    width: 30vw;
+    margin-left: 2.5vw;
+    color: #244779;
+    font-family: "Barlow", sans-serif;
+    height: 7.5vh;
+    border: 1px solid #244779;
+    border-radius: 2vw;
+    font-weight: 500;
+}
+
+.footer {
+    height: 80vh;
+    margin-top: 10vh;
+    display: flex;
+}
+
+.footerlogo {
+    height: 72vh;
+    width: 20vw;
+    padding-left: 8vw;
+    margin-top: 8vh;
+}
+
+.options {
+    height: 80vh;
+    width: 70vw;
+}
+
+.footerlogo1 {
+    width: 9vw;
+}
+
+.footertop {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.footer1,
+.footer2,
+.footer3 {
+    width: 20.5vw;
+    height: 40vh;
+    padding-top: 4vh;
+}
+
+.footerBottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer4,
+.footer5,
+.footer6 {
+    width: 20.5vw;
+    height: 40vh;
+    padding-top: 4vh;
+    margin-top: -10vh
+}
+
+.page2,
+.page3,
+.boxes {
+    background-color: #FAFCFE;
+}
+
+.box1,
+.box2 {
+    background-color: white;
+}
+
+.prompt {
+    height: 17vh;
+    width: 15vw;
+    position: fixed;
+    bottom: 12vh;
+    right: 2vw;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1)
+}
+
+.img1 {
+    position: relative;
+    bottom: 4vh;
+    right: -5.5vw;
+}
+
+.prompt>p {
+    margin-top: -4vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.closeBtn {
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+    outline: none;
+}
+
+.closeBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
