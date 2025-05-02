@@ -1,32 +1,81 @@
+
 import React, { useState } from "react";
-import styles from "./SignUp.module.css"
+import styles from "./SignUp.module.css";
 import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
     const [formData, setFormData] = useState({
-        email: "", password: ""
-    })
+        name: "",
+        phone: "",
+        email: "",
+        password: "",
+        confirmPassword: ""
+    });
+
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
             [name]: value,
-        }))
-    }
+        }));
+    };
 
-    const navigate = useNavigate();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (formData.password !== formData.confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        try {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/signup`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    phone: formData.phone,
+                    email: formData.email,
+                    password: formData.password
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert(data.message || "Account created!");
+                localStorage.setItem("token", data.token); // Save token
+                navigate("/login");
+            } else {
+                alert(data.message || "Signup failed");
+            }
+        } catch (err) {
+            console.error("Signup error:", err);
+            alert("Something went wrong. Please try again.");
+        }
+    };
+
     return (
         <div className={styles.signUpContainer}>
             <div>
                 <div>
-                    <img src="/images/logo.png" className={styles.logo} />
+                    <img src="/images/logo.png" className={styles.logo} alt="Logo" />
                 </div>
                 <div className={styles.header}>
                     <h2 className={styles.heading}>Create an account</h2>
-                    <p className={styles.anchor} onClick={() => navigate("/login")} style={{ cursor: 'pointer' }}><u>Sign in instead</u></p>
+                    <p
+                        className={styles.anchor}
+                        onClick={() => navigate("/login")}
+                        style={{ cursor: "pointer" }}
+                    >
+                        <u>Sign in instead</u>
+                    </p>
                 </div>
-                <form className={styles.form}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                     <label htmlFor="name" className={styles.name}>Name</label>
                     <input
                         type="text"
@@ -35,16 +84,20 @@ const SignUp = () => {
                         className={styles.nameInput}
                         value={formData.name}
                         onChange={handleChange}
-                        required />
+                        required
+                    />
+
                     <label htmlFor="phone" className={styles.phone}>Phone</label>
                     <input
-                        type="Number"
+                        type="number"
                         name="phone"
                         id="phone"
                         className={styles.phoneInput}
                         value={formData.phone}
                         onChange={handleChange}
-                        required />
+                        required
+                    />
+
                     <label htmlFor="email" className={styles.email}>Email</label>
                     <input
                         type="email"
@@ -53,7 +106,9 @@ const SignUp = () => {
                         className={styles.emailInput}
                         value={formData.email}
                         onChange={handleChange}
-                        required />
+                        required
+                    />
+
                     <label htmlFor="password" className={styles.password}>Password</label>
                     <input
                         type="password"
@@ -62,7 +117,9 @@ const SignUp = () => {
                         className={styles.passwordInput}
                         value={formData.password}
                         onChange={handleChange}
-                        required />
+                        required
+                    />
+
                     <label htmlFor="confirmPassword" className={styles.confirmPassword}>Confirm Password</label>
                     <input
                         type="password"
@@ -71,18 +128,26 @@ const SignUp = () => {
                         className={styles.confirmPasswordInput}
                         value={formData.confirmPassword}
                         onChange={handleChange}
-                        required />
+                        required
+                    />
+
                     <div className={styles.checkbox}>
                         <input type="checkbox" id="terms" required />
-                        <label htmlFor="terms" className={styles.terms}>By creating an account, I agree to our <u>Terms of use</u> and <u>Privacy and Policy</u></label>
+                        <label htmlFor="terms" className={styles.terms}>
+                            By creating an account, I agree to our <u>Terms of use</u> and <u>Privacy and Policy</u>
+                        </label>
                     </div>
+
                     <button type="submit" className={styles.submitBtn}>Create an account</button>
-                    <p className={styles.footer}>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of service apply.</p>
+
+                    <p className={styles.footer}>
+                        This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of service apply.
+                    </p>
                 </form>
             </div>
-            <img src="/images/Frame.png" className={styles.pic} />
-        </div >
-    )
-}
+            <img src="/images/Frame.png" className={styles.pic} alt="Illustration" />
+        </div>
+    );
+};
 
-export default SignUp
+export default SignUp;
