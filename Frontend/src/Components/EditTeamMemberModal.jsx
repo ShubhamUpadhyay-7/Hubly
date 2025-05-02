@@ -29,7 +29,7 @@ const EditTeamMemberModal = ({ user, onClose, onUserUpdated }) => {
         const token = localStorage.getItem("token");
 
         try {
-            const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/user/${user._id}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/user/${user._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

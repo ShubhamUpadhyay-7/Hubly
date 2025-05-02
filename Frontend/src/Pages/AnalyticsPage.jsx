@@ -21,7 +21,7 @@ const AnalyticsDashboard = () => {
     useEffect(() => {
         const token = localStorage.getItem("token");
 
-        fetch('${process.env.REACT_APP_API_BASE_URL}/api/analytics', {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/api/analytics`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

@@ -22,7 +22,7 @@ const EditProfile = () => {
         const fetchUser = async () => {
             try {
                 const token = localStorage.getItem("token");
-                const res = await axios.get("${process.env.REACT_APP_API_BASE_URL}/api/user/me", {
+                const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/user/me`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -108,12 +108,12 @@ const EditProfile = () => {
                 email: userData.email,
             };
 
-            await axios.put("${process.env.REACT_APP_API_BASE_URL}/api/user/update", profilePayload, {
+            await axios.put(`${import.meta.env.VITE_API_BASE_URL}/api/user/update`, profilePayload, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 
             if (password) {
-                await axios.put("${process.env.REACT_APP_API_BASE_URL}/api/user/common-password", {
+                await axios.put(`${import.meta.env.VITE_API_BASE_URL}/api/user/common-password`, {
                     newPassword: password,
                 }, {
                     headers: { Authorization: `Bearer ${token}` },

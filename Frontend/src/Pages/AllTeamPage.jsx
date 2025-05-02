@@ -20,7 +20,7 @@ const AllTeamPage = () => {
     const fetchAllUsers = async () => {
         const token = localStorage.getItem("token");
         try {
-            const res = await fetch("${process.env.REACT_APP_API_BASE_URL}/api/allUsers", {
+            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/allUsers`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -44,7 +44,7 @@ const AllTeamPage = () => {
         if (!selectedUser) return;
         const token = localStorage.getItem("token");
         try {
-            await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/user/${selectedUser._id}`, {
+            await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/user/${selectedUser._id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${token}`,

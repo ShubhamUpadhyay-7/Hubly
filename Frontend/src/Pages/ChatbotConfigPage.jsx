@@ -29,7 +29,7 @@ const ChatbotConfigPage = () => {
     useEffect(() => {
         const fetchConfig = async () => {
             try {
-                const res = await axios.get("${process.env.REACT_APP_API_BASE_URL}/api/config", {
+                const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/config`, {
                     headers: getAuthHeaders(),
                 });
                 setHeaderColor(res.data.headerColor);
@@ -52,7 +52,7 @@ const ChatbotConfigPage = () => {
     const autoSave = async () => {
         try {
             await axios.post(
-                "${process.env.REACT_APP_API_BASE_URL}/api/config",
+                `${import.meta.env.VITE_API_BASE_URL}/api/config`,
                 {
                     headerColor,
                     backgroundColor: bgColor,

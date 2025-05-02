@@ -23,7 +23,7 @@ const Chatbot = () => {
 
     useEffect(() => {
         axios
-            .get("${process.env.REACT_APP_API_BASE_URL}/api/config")
+            .get(`${import.meta.env.VITE_API_BASE_URL}/api/config`)
             .then((res) => setConfig(res.data))
             .catch((err) => console.error("Error fetching config:", err));
 
@@ -33,7 +33,7 @@ const Chatbot = () => {
             setFormData(userData);
 
             axios
-                .post("${process.env.REACT_APP_API_BASE_URL}/api/start", userData)
+                .post(`${import.meta.env.VITE_API_BASE_URL}/api/start`, userData)
                 .then((res) => {
                     const { ticketId, assignedTo, messages } = res.data;
                     setTicketData({ ticketId, assignedTo, messages });
@@ -52,7 +52,7 @@ const Chatbot = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("${process.env.REACT_APP_API_BASE_URL}/api/start", formData);
+            const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/start`, formData);
             const { ticketId, assignedTo, messages } = response.data;
 
             setTicketData({ ticketId, assignedTo, messages });
@@ -67,7 +67,7 @@ const Chatbot = () => {
         if (!newMessage.trim()) return;
 
         try {
-            const res = await axios.post("${process.env.REACT_APP_API_BASE_URL}/api/messages/send", {
+            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/messages/send`, {
                 ticketId: ticketData.ticketId,
                 sender: "Customer",
                 content: newMessage,

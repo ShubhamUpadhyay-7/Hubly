@@ -34,7 +34,7 @@ const TicketDashboard = () => {
     const fetchTickets = async () => {
         try {
             setLoading(true);
-            const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/assigned/${adminEmail}`, {
+            const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/assigned/${adminEmail}`, {
                 headers: getAuthHeaders(),
             });
             setTickets(res.data.tickets);
@@ -47,7 +47,7 @@ const TicketDashboard = () => {
 
     const fetchTeamMembers = async () => {
         try {
-            const res = await axios.get("${process.env.REACT_APP_API_BASE_URL}/api/team-members", {
+            const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/team-members`, {
                 headers: getAuthHeaders(),
             });
             setTeamMembers(res.data.teamMembers);
@@ -58,7 +58,7 @@ const TicketDashboard = () => {
 
     const selectTicket = async (ticketId) => {
         try {
-            const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/ticket/${ticketId}`, {
+            const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/ticket/${ticketId}`, {
                 headers: getAuthHeaders(),
             });
             setSelectedTicket(res.data.ticket);
@@ -71,7 +71,7 @@ const TicketDashboard = () => {
         if (!newMessage.trim()) return;
         try {
             await axios.post(
-                `${process.env.REACT_APP_API_BASE_URL}/api/ticket/${selectedTicket._id}/message`,
+                `${import.meta.env.VITE_API_BASE_URL}/api/ticket/${selectedTicket._id}/message`,
                 {
                     sender: "Admin",
                     content: newMessage,
@@ -98,7 +98,7 @@ const TicketDashboard = () => {
     const updateAssignedTo = async (newAssignedEmail) => {
         try {
             await axios.patch(
-                `${process.env.REACT_APP_API_BASE_URL}/api/ticket/${selectedTicket._id}/assign`,
+                `${import.meta.env.VITE_API_BASE_URL}/api/ticket/${selectedTicket._id}/assign`,
                 {
                     assignedTo: newAssignedEmail,
                 },
@@ -128,7 +128,7 @@ const TicketDashboard = () => {
     const updateStatus = async (newStatus) => {
         try {
             await axios.patch(
-                `${process.env.REACT_APP_API_BASE_URL}/${selectedTicket._id}/status`,
+                `${import.meta.env.VITE_API_BASE_URL}/${selectedTicket._id}/status`,
                 {
                     status: newStatus,
                 },
