@@ -159,6 +159,7 @@
 
 .points {
     padding-left: 2vw;
+    color:#394B59;
 }
 
 .points>h3 {
@@ -256,6 +257,7 @@
     border: 1px solid #244779;
     border-radius: 2vw;
     font-weight: 500;
+    background-color: white;
 }
 
 .btn2 {
@@ -268,12 +270,15 @@
     border: 1px solid #244779;
     border-radius: 2vw;
     font-weight: 500;
+    background-color: white;
 }
 
 .footer {
     height: 80vh;
-    margin-top: 10vh;
+    padding-top: 10vh;
     display: flex;
+    background-color: white;
+    color:black
 }
 
 .footerlogo {
