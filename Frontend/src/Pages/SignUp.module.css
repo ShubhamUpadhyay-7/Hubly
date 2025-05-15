@@ -19,6 +19,7 @@
     display: flex;
     width: 100vw;
     justify-content: space-between;
+    background-color: white;
 }
 
 .pic {
@@ -71,12 +72,13 @@
     width: 35vw;
     border: 1px solid rgba(102, 102, 102, 0.35);
     border-radius: 0.6vw;
+    color:#666666;
 }
 
 .submitBtn {
     margin-top: 6vh;
     background-color: #c3c3c3;
-    width: 35vw;
+    width: 36vw;
     border-radius: 5vw;
     color: white;
     font-family: "Inter", sans-serif;
@@ -93,4 +95,5 @@
 
 .terms {
     font-size: 0.8vw;
+    color: #676B5F;
 }
