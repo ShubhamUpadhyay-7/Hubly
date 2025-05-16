@@ -56,4 +56,5 @@
 .icon {
     cursor: pointer;
     color: #999;
+    min-width: 1vw;
 }

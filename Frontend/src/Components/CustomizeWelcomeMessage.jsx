@@ -1,21 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./CustomizeWelcomeMessage.module.css";
 import { FiEdit2 } from "react-icons/fi";
-import axios from "axios";
 
 const CustomizeWelcomeMessage = ({ welcomeMessage, setWelcomeMessage }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [tempMessage, setTempMessage] = useState(welcomeMessage);
 
-    const handleSave = async () => {
-        try {
-            await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/config`, {
-                welcomeMessage: tempMessage,
-            });
-            setWelcomeMessage(tempMessage);
-            setIsEditing(false);
-        } catch (err) {
-            console.error("Failed to update welcome message:", err);
+    useEffect(() => {
+        setTempMessage(welcomeMessage);
+    }, [welcomeMessage]);
+
+    const handleSave = () => {
+        setWelcomeMessage(tempMessage);
+        setIsEditing(false);
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault(); // prevent newline
+            handleSave();
         }
     };
 
@@ -29,18 +32,17 @@ const CustomizeWelcomeMessage = ({ welcomeMessage, setWelcomeMessage }) => {
                         value={tempMessage}
                         onChange={(e) => setTempMessage(e.target.value)}
                         onBlur={handleSave}
-                        maxLength={50}
+                        onKeyDown={handleKeyDown}
+                        maxLength={150}
                         autoFocus
                     />
                 ) : (
                     <div className={styles.preview}>
-                        <span>👋 {welcomeMessage}</span>
+                        <span>{welcomeMessage}</span>
                         <FiEdit2 className={styles.icon} onClick={() => setIsEditing(true)} />
                     </div>
                 )}
-                <span className={styles.counter}>
-                    {tempMessage.length}/50
-                </span>
+                <span className={styles.counter}>{tempMessage.length}/150</span>
             </div>
         </div>
     );

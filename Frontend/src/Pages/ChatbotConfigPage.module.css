@@ -3,14 +3,16 @@
 .wrapper {
     display: flex;
     gap: 10vw;
+    background-color: white;
+    color:#666666
 }
 
 .chatPreview {
-    margin-left: 15vw;
+    margin-left: 24vw;
 }
 
 .heading {
-    margin-left: -4vw;
+    margin-left: -12vw;
     font-family: "Inter", sans-serif;
     color: #6A6B70;
     font-size: 18px;

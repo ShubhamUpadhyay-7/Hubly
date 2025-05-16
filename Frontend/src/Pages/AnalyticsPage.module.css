@@ -3,6 +3,8 @@
 .container {
     display: flex;
     font-family: "Inter", sans-serif;
+    background-color: white;
+    color:#666666
 }
 
 .sidebar {

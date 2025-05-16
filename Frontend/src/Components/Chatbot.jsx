@@ -180,7 +180,7 @@ const Chatbot = () => {
                                         onChange={(e) => setNewMessage(e.target.value)}
                                     />
                                     <button onClick={handleSendMessage}>
-                                        <FontAwesomeIcon icon={faPaperPlane} size="lg" color="#B0C1D4" />
+                                        <FontAwesomeIcon icon={faPaperPlane} size="lg"/>
                                     </button>
                                 </div>
                             </>

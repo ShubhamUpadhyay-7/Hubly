@@ -1,6 +1,6 @@
 .botSize {
     width: 15vw;
-    height: 15vh;
+    min-height: 15vh;
     border-radius: 0.5vw;
     margin-top: 10vh;
     margin-left: 12.5vw;

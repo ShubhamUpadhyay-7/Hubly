@@ -144,8 +144,6 @@ const TicketDashboard = () => {
     return (
         <div className={styles.dashboard}>
             <div><Sidebar /></div>
-
-
             <div className={styles.sidebar}>
                 <h2>Contact Center</h2>
                 <h4>Chats</h4>
